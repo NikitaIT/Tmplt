@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html id="html">
+  <head>
+    <title>Шаблоньчик</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Forum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="menu">
+      <ul class="nul">
+        <li class="line"><a class="block" href="#">first-child</a></li>
+        <li class="line"><a class="block" id="active" href="#">Пункт 1</a></li>
+        <li class="line"><a class="block" href="#">Пункт 2</a></li>
+        <li class="line"><a class="block" href="#">last-child</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <img src="http://lince.ru/inside/uploads/images/full/c4f3d6a46859441fe07ec05501135ee5346fc0d7.png" alt="Normal" width="100%" height="100%" />
+    </div>
+  </body>
+  <footer>
+    <p style="text-align:center;color: darkcyan;">Copyright Никита Федоров</p>
+  </footer>
+</html>
+
+<style>
+/*    *{border: 1px solid black;}*/
+  #html{
+    /*Задает общий стиль страницы*/
+    /*Шрифт*/font-style: normal;font-size: 16px;font-family: 'Forum', cursive;
+/*    background-color:aliceblue;*/
+    background-image:url(files/bg.webp); background-repeat:no-repeat;background-attachment:fixed; background-size: cover;
+  }
+  #active {
+    /*Определяет цветом в меню страницу на которой мы находимся*/
+    background-color:blueviolet;
+    color: white;
+  }
+  .block:hover:not(.active) {
+    background-color:blueviolet;
+  }
+  .block{
+    display: block;
+    color: aliceblue;
+    padding: 8px 20px;
+    /*Текст списка*/text-align: center;text-decoration: none;
+  }
+  .nul{
+    list-style-type: none;
+    margin: 0; padding: 0; background-color:cadetblue;
+    overflow: hidden;
+  }
+  .line{
+    /*Расположение эл*/display: inline; float: left;
+    /*Шрифт*/font-style: 25px;
+  }
+  .line:last-child {
+    float:right;
+  }
+  body{
+/* Показать тело background-color:bisque;*/
+  }
+  footer{
+    background-color:none;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .main{
+   /* Размер блока в который встроена картинка (100/100)% */width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    /*прозрачность блока*/opacity: 0.8;
+/* Показать блок  border: 1px solid red;*/
+  }
+  .main:hover{opacity: 1;}
+</style>
